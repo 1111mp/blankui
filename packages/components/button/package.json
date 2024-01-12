@@ -1,0 +1,18 @@
+{
+  "name": "@blankui-org/button",
+  "version": "1.0.0",
+  "description": "Buttons allow users to perform actions and choose with a single tap.",
+  "keywords": [
+    "button"
+  ],
+  "author": "",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "echo \"message from @blankui-org/button\" && exit 0"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  }
+}

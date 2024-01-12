@@ -1,0 +1,22 @@
+{
+  "name": "blankui",
+  "version": "1.0.0",
+  "description": "Here's everything you need to build a modern Web UI component library from scratch.",
+  "keywords": [
+    "blankui",
+    "monorepe"
+  ],
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.47",
+    "@types/react-dom": "^18.2.18",
+    "turbo": "^1.11.3",
+    "typescript": "^5.3.3"
+  }
+}
