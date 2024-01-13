@@ -1,0 +1,17 @@
+{
+  "name": "@blankui-org/react",
+  "version": "1.0.0",
+  "description": "🚀 Beautiful and modern React UI library.",
+  "keywords": ["blankui", "components", "react components", "react ui"],
+  "author": "",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "scripts": {},
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@blankui-org/button": "workspace:*"
+  }
+}
