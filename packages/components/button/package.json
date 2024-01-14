@@ -8,11 +8,20 @@
   "author": "",
   "license": "MIT",
   "main": "src/index.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
   "scripts": {
-    "dev": "echo \"message from @blankui-org/button\" && exit 0"
+    "dev": "echo \"message from @blankui-org/button\" && exit 0",
+    "build": "tsup src --dts"
   },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@stitches/core": "^1.2.8",
+    "@stitches/react": "^1.2.8"
   }
 }

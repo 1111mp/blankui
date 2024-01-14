@@ -4,20 +4,23 @@
   "description": "Here's everything you need to build a modern Web UI component library from scratch.",
   "keywords": [
     "blankui",
-    "monorepe"
+    "monorepo"
   ],
   "author": "",
   "license": "MIT",
   "scripts": {
     "dev": "turbo dev",
     "dev:sb": "turbo dev --filter=@blankui-org/storybook",
-    "build": "turbo build",
+    "build": "turbo build --filter=!@blankui-org/storybook",
     "lint": "turbo lint"
   },
   "devDependencies": {
     "@storybook/react": "^7.6.8",
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
+    "tsup": "^8.0.1",
     "turbo": "^1.11.3",
     "typescript": "^5.3.3"
   }
