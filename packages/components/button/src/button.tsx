@@ -1,3 +1,5 @@
+import React from "react";
+
 import "./button.css";
 
 interface ButtonProps {
@@ -40,7 +42,7 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       type="button"
       className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
+        " ",
       )}
       style={{ backgroundColor }}
       {...props}
