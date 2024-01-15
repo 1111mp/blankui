@@ -6,8 +6,9 @@
   "keywords": [
     "storybook"
   ],
+  "private": true,
   "license": "MIT",
-  "scripts": {
+    "scripts": {
     "dev": "storybook dev -h 127.0.0.1 -p 6006",
     "build": "storybook build",
     "start": "pnpm dlx http-server storybook-static"

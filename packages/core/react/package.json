@@ -1,6 +1,6 @@
 {
   "name": "@blankui-org/react",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "🚀 Beautiful and modern React UI library.",
   "keywords": [
     "blankui",
@@ -14,6 +14,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "sideEffects": false,
   "scripts": {
     "build": "tsup src --dts"

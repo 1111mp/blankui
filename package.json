@@ -18,9 +18,18 @@
     "lint:packages-fix": "eslint --fix ./packages/**/*.{ts,tsx}",
     "format:check": "prettier --check packages/**/**/src --cache",
     "format:write": "prettier --write packages/**/**/src --cache",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "changeset": "changeset add",
+    "version": "changeset version",
+    "version:snapshot": "changeset version --snapshot dev",
+    "release": "changeset publish",
+    "release:snapshot": "changeset publish --snapshot --no-git-tag --tag dev"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.1",
+    "@changesets/get-release-plan": "^4.0.0",
+    "@changesets/types": "^6.0.0",
     "@commitlint/cli": "^18.4.4",
     "@commitlint/config-conventional": "^18.4.4",
     "@storybook/react": "^7.6.8",
