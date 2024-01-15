@@ -27,6 +27,10 @@ out/
 build
 dist
 
+# clean-package
+packages/**/*.backup
+packages/**/*.backup.ts
+
 
 # Debug
 npm-debug.log*
