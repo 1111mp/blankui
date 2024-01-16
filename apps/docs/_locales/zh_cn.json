@@ -3,5 +3,8 @@
   "description": "🚀 美丽而现代的 React UI 库。",
   "Hello": {
     "title": "你好，BlankUI！"
+  },
+  "Button": {
+    "desc": "按钮允许用户执行操作并通过单击进行选择。"
   }
 }
