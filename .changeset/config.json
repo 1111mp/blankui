@@ -10,5 +10,5 @@
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   },
-  "ignore": ["@blankui-org/storybook"]
+  "ignore": ["@nextui-org/docs", "@blankui-org/storybook"]
 }
