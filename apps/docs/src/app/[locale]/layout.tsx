@@ -1,3 +1,4 @@
+import { Header } from "@/components/header";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { locales } from "@/config";
 
@@ -25,5 +26,10 @@ export default function LocaleLayout({ children, params: { locale } }: Props) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
-  return children;
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  );
 }
