@@ -11,6 +11,7 @@
   "scripts": {
     "dev": "turbo dev",
     "dev:sb": "turbo dev --filter=@blankui-org/storybook",
+    "dev:docs": "turbo dev --filter=@blankui-org/docs",
     "build": "turbo build --filter=!@blankui-org/storybook",
     "test": "jest --verbose",
     "lint": "pnpm lint:packages",

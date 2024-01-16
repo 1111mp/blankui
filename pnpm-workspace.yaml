@@ -1,2 +1,5 @@
 packages:
+  - "apps/**/**"
   - "packages/**/**"
+  - "!**/.next/**" # NEW
+  - "!**/dist/**" # NEW
