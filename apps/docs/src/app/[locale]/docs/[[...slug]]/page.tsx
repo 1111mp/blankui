@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { allDocs } from "contentlayer/generated";
+import { Menu } from "@/components/menu";
 import { MdxComponent } from "@/components/mdx-components";
 
 export async function generateStaticParams() {
@@ -18,8 +19,11 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   if (!doc) notFound();
 
   return (
-    <div>
-      <MdxComponent code={doc.body.code} />
+    <div className="flex">
+      <Menu />
+      <div className="flex-1">
+        <MdxComponent code={doc.body.code} />
+      </div>
     </div>
   );
 }

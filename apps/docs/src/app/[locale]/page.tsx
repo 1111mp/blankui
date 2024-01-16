@@ -10,5 +10,5 @@ export default async function IndexPage({ params: { locale } }: Props) {
 
   const t = await getTranslations("Hello");
 
-  return <main>{t("title")}</main>;
+  return <main className="mx-auto w-full max-w-7xl">{t("title")}</main>;
 }

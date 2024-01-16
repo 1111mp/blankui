@@ -3,7 +3,7 @@
 import { startTransition } from "react";
 import { useTheme } from "next-themes";
 import { useLocale } from "next-intl";
-import { usePathname, useRouter } from "@/navigation";
+import { Link, usePathname, useRouter } from "@/navigation";
 
 type Props = {};
 
@@ -26,11 +26,16 @@ export const Header: React.FC<Props> = () => {
   return (
     <nav className="flex h-16 justify-center">
       <header className="flex w-full max-w-7xl">
+        <ul className="flex flex-1 ">
+          <li className="flex items-center">
+            <Link href="/docs/components/welcome">Components</Link>
+          </li>
+        </ul>
         <ul className="flex gap-4">
           <li className="flex align-middle">
             <select
               name="theme"
-              className="outline-none"
+              className="outline-none dark:bg-transparent"
               defaultValue={theme}
               onChange={(e) => setTheme(e.target.value)}
             >
@@ -42,7 +47,7 @@ export const Header: React.FC<Props> = () => {
           <li className="flex align-middle">
             <select
               name="locale"
-              className="outline-none"
+              className="outline-none dark:bg-transparent"
               defaultValue={locale}
               onChange={onSelectChange}
             >
