@@ -1,8 +1,17 @@
-const App = `const App = () => {
-  return (
-    <Button primary={true} label="Button" onClick={() => alert("I'm Button")} />
-  );
-}
-render(<App/>);`;
+const App = `import {Button} from "@blankui-org/react";
 
-export default App;
+export default function App() {
+  return (
+    <Button primary label="Button" />
+  );
+}`;
+
+const react = {
+  "/App.tsx": App,
+};
+
+const usage = {
+  ...react,
+};
+
+export default usage;

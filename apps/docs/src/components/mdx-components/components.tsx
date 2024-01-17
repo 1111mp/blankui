@@ -15,12 +15,12 @@ export const components: MDXComponents = {
   Sandpack,
 
   h1: (props: React.HTMLAttributes<HTMLHeadElement>) => (
-    <h1 className="font-bold text-red-600" {...props}>
+    <h1 className="mb-4 text-4xl font-bold" {...props}>
       {props.children}
     </h1>
   ),
   h2: (props: React.HTMLAttributes<HTMLHeadElement>) => (
-    <h2 className="text-green-400" {...props}>
+    <h2 className="mb-4 text-3xl font-bold" {...props}>
       {props.children}
     </h2>
   ),
@@ -32,6 +32,11 @@ export const components: MDXComponents = {
   ),
   strong: (props: React.HTMLAttributes<HTMLElement>) => (
     <strong className="font-medium" {...props} />
+  ),
+  p: (props: React.HTMLAttributes<HTMLParagraphElement>) => (
+    <p {...props} className="my-2">
+      {props.children}
+    </p>
   ),
   a: (props: React.HTMLAttributes<HTMLAnchorElement>) => (
     <a {...props}>{props.children}</a>

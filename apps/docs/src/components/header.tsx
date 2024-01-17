@@ -24,7 +24,7 @@ export const Header: React.FC<Props> = () => {
   };
 
   return (
-    <nav className="flex h-16 justify-center">
+    <nav className="flex h-16 justify-center border-b shadow-sm dark:border-gray-800 dark:shadow-gray-900">
       <header className="flex w-full max-w-7xl">
         <ul className="flex flex-1 ">
           <li className="flex items-center">

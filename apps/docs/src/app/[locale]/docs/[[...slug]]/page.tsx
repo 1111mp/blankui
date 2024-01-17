@@ -19,7 +19,7 @@ export default async function Page({ params }: { params: { slug: string[] } }) {
   if (!doc) notFound();
 
   return (
-    <div className="flex">
+    <div className="flex gap-3">
       <Menu />
       <div className="flex-1">
         <MdxComponent code={doc.body.code} />

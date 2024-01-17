@@ -15,6 +15,7 @@
     "@t3-oss/env-nextjs": "^0.7.1",
     "contentlayer": "^0.3.4",
     "date-fns": "^3.2.0",
+    "lodash": "^4.17.21",
     "next": "^14.0.4",
     "next-contentlayer": "^0.3.4",
     "next-intl": "^3.4.2",
@@ -25,10 +26,12 @@
     "react-live": "^4.1.5",
     "rehype-highlight": "^7.0.0",
     "remark-gfm": "^4.0.0",
+    "usehooks-ts": "^2.9.4",
     "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/eslint": "^8.44.7",
+    "@types/lodash": "^4.14.202",
     "@types/mdx": "^2.0.10",
     "@types/node": "^18.17.0",
     "@types/react": "^18.2.37",

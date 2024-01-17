@@ -3,5 +3,7 @@ export default function DocsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main className="mx-auto w-full max-w-7xl flex-1">{children}</main>;
+  return (
+    <main className="mx-auto w-full max-w-7xl flex-1 p-3">{children}</main>
+  );
 }

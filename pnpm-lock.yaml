@@ -149,6 +149,9 @@ importers:
       date-fns:
         specifier: ^3.2.0
         version: 3.2.0
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
       next:
         specifier: ^14.0.4
         version: 14.0.4(@babel/core@7.23.7)(@opentelemetry/api@1.7.0)(react-dom@18.2.0)(react@18.2.0)
@@ -179,6 +182,9 @@ importers:
       remark-gfm:
         specifier: ^4.0.0
         version: 4.0.0
+      usehooks-ts:
+        specifier: ^2.9.4
+        version: 2.9.4(react-dom@18.2.0)(react@18.2.0)
       zod:
         specifier: ^3.22.4
         version: 3.22.4
@@ -186,6 +192,9 @@ importers:
       '@types/eslint':
         specifier: ^8.44.7
         version: 8.56.2
+      '@types/lodash':
+        specifier: ^4.14.202
+        version: 4.14.202
       '@types/mdx':
         specifier: ^2.0.10
         version: 2.0.10
@@ -10841,7 +10850,6 @@ packages:
 
   /lodash@4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: true
 
   /log-symbols@4.1.0:
     resolution: {integrity: sha512-8XPvpAA8uyhfteu8pIvQxpJZ7SYYdpUivZpGy6sFsBuKRY/7rQGavedeB8aK+Zkyq6upMFVL/9AW6vOYzfRyLg==}
@@ -15168,6 +15176,17 @@ packages:
       react: 18.2.0
       tslib: 2.6.2
     dev: true
+
+  /usehooks-ts@2.9.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-VOSEbA+BGGORLttsICowNb5CG0D2/IEoVvMEl9OuuOoQi99W6XuNipo3SPFhWo3Bhdwi0Swj1D+IMQDQB9KrwQ==}
+    engines: {node: '>=16.15.0'}
+    peerDependencies:
+      react: ^16.8.0  || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}

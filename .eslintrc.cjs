@@ -43,11 +43,13 @@ const config = {
     "no-console": "warn",
     "prettier/prettier": "warn",
     "react/react-in-jsx-scope": "off",
+    "no-unsafe-optional-chaining": "off",
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/ban-ts-comment": [
       "error",
       {
         "ts-expect-error": "allow-with-description",
+        "ts-ignore": "allow-with-description",
       },
     ],
     "@typescript-eslint/ban-types": [
