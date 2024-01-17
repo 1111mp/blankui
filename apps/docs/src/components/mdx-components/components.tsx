@@ -3,6 +3,7 @@ import * as Components from "@blankui-org/react";
 import { Code } from "../code";
 
 import type { MDXComponents } from "mdx/types";
+import { Sandpack } from "../sandpack";
 
 export const components: MDXComponents = {
   NextImage,
@@ -10,6 +11,8 @@ export const components: MDXComponents = {
   ...Components,
 
   Code,
+
+  Sandpack,
 
   h1: (props: React.HTMLAttributes<HTMLHeadElement>) => (
     <h1 className="font-bold text-red-600" {...props}>

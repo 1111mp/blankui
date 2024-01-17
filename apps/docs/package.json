@@ -10,8 +10,9 @@
     "start": "next start"
   },
   "dependencies": {
-    "@t3-oss/env-nextjs": "^0.7.1",
     "@blankui-org/react": "workspace:*",
+    "@codesandbox/sandpack-react": "^2.11.2",
+    "@t3-oss/env-nextjs": "^0.7.1",
     "contentlayer": "^0.3.4",
     "date-fns": "^3.2.0",
     "next": "^14.0.4",
