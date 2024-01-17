@@ -1,10 +1,13 @@
 import NextImage from "next/image";
+import * as Components from "@blankui-org/react";
 import { Code } from "../code";
 
 import type { MDXComponents } from "mdx/types";
 
 export const components: MDXComponents = {
   NextImage,
+
+  ...Components,
 
   Code,
 
