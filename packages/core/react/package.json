@@ -1,6 +1,6 @@
 {
   "name": "@blankui-org/react",
-  "version": "2.0.1",
+  "version": "1.0.0",
   "description": "🚀 Beautiful and modern React UI library.",
   "keywords": [
     "blankui",
@@ -20,6 +20,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsup src --dts",
+    "clean": "rimraf dist .turbo",
     "prepack": "clean-package",
     "postpack": "clean-package restore"
   },
@@ -28,7 +29,10 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@blankui-org/button": "workspace:*"
+    "@blankui-org/system": "workspace:*",
+    "@blankui-org/theme": "workspace:*",
+    "@blankui-org/button": "workspace:*",
+    "@blankui-org/link": "workspace:*"
   },
   "clean-package": "../../../clean-package.config.json"
 }

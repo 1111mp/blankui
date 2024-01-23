@@ -12,6 +12,10 @@
     },
     "lint": {
       "dependsOn": ["^lint"]
+    },
+    "clean": {
+      "cache": false,
+      "outputs": []
     }
   }
 }

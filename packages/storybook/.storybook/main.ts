@@ -1,4 +1,6 @@
 import { join, dirname } from "path";
+import { mergeConfig } from "vite";
+import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 
 import type { StorybookConfig } from "@storybook/react-vite";
 
@@ -31,5 +33,11 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   staticDirs: ["../public"],
+
+  async viteFinal(config) {
+    return mergeConfig(config, {
+      plugins: [vanillaExtractPlugin()],
+    });
+  },
 };
 export default config;

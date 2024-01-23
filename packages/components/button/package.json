@@ -1,6 +1,6 @@
 {
   "name": "@blankui-org/button",
-  "version": "2.0.1",
+  "version": "1.0.0",
   "description": "Buttons allow users to perform actions and choose with a single tap.",
   "keywords": [
     "button"
@@ -17,16 +17,22 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsup src --dts",
+    "clean": "rimraf dist .turbo",
     "prepack": "clean-package",
     "postpack": "clean-package restore"
   },
   "peerDependencies": {
+    "@blankui-org/system": ">=1.0.0",
+    "@blankui-org/theme": ">=1.0.0",
     "react": ">=18",
     "react-dom": ">=18"
   },
   "dependencies": {
-    "@stitches/core": "^1.2.8",
-    "@stitches/react": "^1.2.8"
+    "@blankui-org/react-utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@blankui-org/system": "workspace:*",
+    "@blankui-org/theme": "workspace:*"
   },
   "clean-package": "../../../clean-package.config.json"
 }

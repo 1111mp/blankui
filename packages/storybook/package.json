@@ -8,12 +8,17 @@
   ],
   "private": true,
   "license": "MIT",
-    "scripts": {
+  "scripts": {
     "dev": "storybook dev -h 127.0.0.1 -p 6006",
     "build": "storybook build",
     "start": "pnpm dlx http-server storybook-static"
   },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
+    "@blankui-org/theme": "workspace:*",
     "@storybook/addon-a11y": "^7.6.7",
     "@storybook/addon-essentials": "^7.6.7",
     "@storybook/addon-interactions": "^7.6.7",
@@ -24,9 +29,10 @@
     "@storybook/react-vite": "^7.6.7",
     "@storybook/test": "^7.6.7",
     "@storybook/theming": "^7.6.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@vanilla-extract/css": "^1.14.0",
+    "@vanilla-extract/vite-plugin": "^3.9.3",
     "storybook": "^7.6.7",
-    "storybook-dark-mode": "^3.0.3"
+    "storybook-dark-mode": "^3.0.3",
+    "vite": "^5.0.11"
   }
 }

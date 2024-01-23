@@ -1,6 +1,6 @@
 module.exports = {
   testEnvironment: "jsdom",
-  moduleDirectories: ["node_modules"],
+  moduleDirectories: ["node_modules", "packages/**/**/node_modules"],
   moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json"],
   // collectCoverage: true,
   collectCoverageFrom: [
@@ -11,6 +11,7 @@ module.exports = {
   // React is not defined
   // https://github.com/swc-project/swc-node/issues/635
   transform: {
+    "\\.css\\.ts$": "@vanilla-extract/jest-transform",
     "\\.(ts|tsx|js|jsx)$": [
       "@swc/jest",
       {
@@ -24,9 +25,9 @@ module.exports = {
       },
     ],
   },
-  // transformIgnorePatterns: ["[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"],
+  transformIgnorePatterns: ["node_modules/.pnpm/(?!(flat))"],
   moduleNameMapper: {
-    "\\.(css|less)$": "identity-obj-proxy",
+    "\\.(less)$": "identity-obj-proxy",
   },
   setupFilesAfterEnv: ["./jest.setup.ts"],
 };

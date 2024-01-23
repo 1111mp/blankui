@@ -2,7 +2,7 @@ const App = `import {Button} from "@blankui-org/react";
 
 export default function App() {
   return (
-    <Button primary label="Button" />
+    <Button color="primary">Button</Button>
   );
 }`;
 

@@ -1,53 +1,29 @@
-import React from "react";
+import { useMemo } from "react";
+import { forwardRef, type HTMLBlankUIProps } from "@blankui-org/system";
+import { button, ButtonVariantProps } from "@blankui-org/theme";
+import { useDOMRef } from "@blankui-org/react-utils";
 
-import "./button.css";
+export type ButtonProps = HTMLBlankUIProps<"button"> &
+  ButtonVariantProps & {
+    children: React.ReactNode;
+    /**
+     * The native button click event handler.
+     */
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  };
 
-interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: "small" | "medium" | "large";
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
-}
+export const Button = forwardRef<"button", ButtonProps>(
+  ({ as, color, size, children, ...props }, ref) => {
+    const domRef = useDOMRef(ref);
 
-/**
- * Primary UI component for user interaction
- */
-export const Button: React.FC<ButtonProps> = ({
-  primary = false,
-  size = "medium",
-  backgroundColor,
-  label,
-  ...props
-}) => {
-  const mode = primary
-    ? "storybook-button--primary"
-    : "storybook-button--secondary";
-  return (
-    <button
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " ",
-      )}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
-  );
-};
+    const styles = useMemo(() => button({ color, size }), [color, size]);
+
+    const Component = as || "button";
+
+    return (
+      <Component ref={domRef} className={styles} {...props}>
+        {children}
+      </Component>
+    );
+  },
+);

@@ -8,13 +8,7 @@ import { useLocalStorage } from "usehooks-ts";
 
 import { type HighlightedLines } from "./types";
 import { getHighlightedLines, getFileName } from "./utils";
-import {
-  stylesConfig,
-  postcssConfig,
-  tailwindConfig,
-  getHtmlFile,
-  rootFile,
-} from "./entries";
+import { viteConfig, getHtmlFile, rootFile } from "./entries";
 
 export interface UseSandpackProps {
   files?: SandpackFiles;
@@ -144,58 +138,12 @@ export const useSandpack = ({
       };
     }, {});
 
-  /**
-   * Uncomment this logic when specific imports are needed
-   */
-  // const nextUIComponents = useMemo(
-  //   () =>
-  //     Object.values(getNextUIComponents(sortedFiles) || {}).flatMap((e) =>
-  //       e.split(",").map((name) => name.replace(/"/g, "")),
-  //     ),
-  //   [sortedFiles],
-  // );
-
-  // const hasComponents = !isEmpty(nextUIComponents);
-
-  // const dependencies = useMemo(() => {
-  //   let deps = {
-  //     "framer-motion": "10.12.16",
-  //   };
-
-  //   if (hasComponents) {
-  //     let deps = {
-  //       "@nextui-org/theme": "dev-v2",
-  //       "@nextui-org/system": "dev-v2",
-  //     };
-
-  //     nextUIComponents.forEach((component) => {
-  //       deps = {
-  //         ...deps,
-  //         [`@nextui-org/${component}`]: "dev-v2",
-  //       };
-  //     });
-
-  //     return deps;
-  //   }
-
-  //   return {
-  //     ...deps,
-  //     "@nextui-org/react": "dev-v2",
-  //   };
-  // }, [hasComponents, nextUIComponents, component]);
-
-  // const tailwindConfigFile = useMemo(
-  //   () => (hasComponents ? updateTailwindConfig(tailwindConfig, nextUIComponents) : tailwindConfig),
-  //   [tailwindConfig, nextUIComponents],
-  // );
-
   const customSetup = {
     dependencies,
     entry: entryFile,
     devDependencies: {
-      autoprefixer: "^10.4.14",
-      postcss: "^8.4.21",
-      tailwindcss: "^3.2.7",
+      "@vanilla-extract/css": "latest",
+      "@vanilla-extract/vite-plugin": "latest",
     },
   };
 
@@ -211,18 +159,7 @@ export const useSandpack = ({
         code: getHtmlFile(theme ?? "light", entryFile),
         hidden: true,
       },
-      "tailwind.config.js": {
-        code: tailwindConfig,
-        hidden: true,
-      },
-      "postcss.config.js": {
-        code: postcssConfig,
-        hidden: true,
-      },
-      "styles.css": {
-        code: stylesConfig,
-        hidden: true,
-      },
+      "vite.config.ts": { code: viteConfig, hidden: true },
     },
     hasTypescript,
     entryFile,

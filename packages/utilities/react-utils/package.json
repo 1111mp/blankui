@@ -1,0 +1,29 @@
+{
+  "name": "@blankui-org/react-utils",
+  "version": "1.0.0",
+  "description": "A set of utilities for react on client side",
+  "keywords": [
+    "react-utils"
+  ],
+  "author": "",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup src --dts",
+    "clean": "rimraf dist .turbo",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {},
+  "clean-package": "../../../clean-package.config.json"
+}

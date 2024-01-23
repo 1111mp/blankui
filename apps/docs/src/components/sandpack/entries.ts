@@ -2,7 +2,6 @@ export const rootFile = `
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -28,31 +27,12 @@ export const getHtmlFile = (
   </body>
 </html>`;
 
-export const tailwindConfig = `const { nextui } = require("@nextui-org/react");
+export const viteConfig = `import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./index.html",
-    "./*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  darkMode: "class",
-  plugins: [nextui()],
-};`;
-
-export const postcssConfig = `module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}`;
-
-export const stylesConfig = `@import url("node_modules/@blankui-org/react/dist/index.css");
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;`;
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [vanillaExtractPlugin(), react()],
+})
+`;
